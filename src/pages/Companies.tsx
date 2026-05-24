@@ -18,7 +18,26 @@ export default function Companies() {
       if (c.investmentKpi.realAiRevenueConfidenceScore < filter.minRealAiRevenue) return false;
       const q = filter.query.trim().toLowerCase();
       if (q) {
-        const haystack = `${c.name} ${c.nameZh ?? ''} ${c.ticker}`.toLowerCase();
+        const haystack = [
+          c.name,
+          c.nameZh,
+          c.ticker,
+          c.whatTheyDo,
+          c.whyAiRelevant,
+          c.competitiveAdvantage,
+          c.aiMoat,
+          ...(c.coreProducts ?? []),
+          ...(c.aiProducts ?? []),
+          ...(c.aiSoftwareType ?? []),
+          ...(c.monetizationModel ?? []),
+          ...(c.competitors ?? []),
+          ...(c.customerType ?? []),
+          ...(c.tags ?? []),
+          ...(c.technicalKeywords ?? []),
+        ]
+          .filter(Boolean)
+          .join(' ')
+          .toLowerCase();
         if (!haystack.includes(q)) return false;
       }
       return true;

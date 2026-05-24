@@ -216,6 +216,10 @@ export const ADS_AND_VERTICAL: Company[] = [
     confidenceLevel: 'High',
     lastUpdated: '2026-05-24',
     investmentType: ['ai-upsell-saas', 'data-moat'],
+    analystView:
+      'AppLovin 是少數能用真實財報「指著 AI 帶來的營收與毛利」的公司，AXON 飛輪是 ML 直接變現的教科書案例。但本質仍是行動廣告產業，週期性風險始終存在；當行動廣告大盤回落，AXON 的優勢可能被吃掉一部分。短期股價對任何 ASA / 隱私政策變動高度敏感。',
+    tags: ['ads', 'ml-driven', 'mobile', 'consumer'],
+    technicalKeywords: ['AXON', 'MAX', 'AppLovin Exchange'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 85,
       revenueAcceleration: 90,
@@ -603,6 +607,10 @@ export const ADS_AND_VERTICAL: Company[] = [
     confidenceLevel: 'High',
     lastUpdated: '2026-05-24',
     investmentType: ['disruption-risk'],
+    analystView:
+      'Chegg 是 LLM 時代「被顛覆」最直接的案例：付費答題服務的功能 ChatGPT 一句話免費解決。CheggMate 等 AI 加值都難以重建差異化。本網站列入主要是作為「估值看似便宜但顛覆風險明確」的教材，不代表反向投資機會。',
+    tags: ['ai-native-risk', 'education', 'consumer', 'seat-risk'],
+    technicalKeywords: ['CheggMate'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 40,
       revenueAcceleration: 20,
@@ -671,6 +679,10 @@ export const ADS_AND_VERTICAL: Company[] = [
     confidenceLevel: 'Low',
     lastUpdated: '2026-05-24',
     investmentType: ['ai-upsell-saas', 'disruption-risk'],
+    analystView:
+      'C3.ai 是「股票代碼即 AI」的代表，敘事強但實際 ARR / 客戶結構脆弱。從訂閱轉用量計費的過渡讓財報波動加大，需要看連續兩季的真實 ARR 成長率才能下判斷。在投資 AI 軟體時，C3.ai 是「不要只看公司名字買股」的最佳示範。',
+    tags: ['enterprise', 'vertical', 'agent', 'ai-native-risk'],
+    technicalKeywords: ['C3 Generative AI Suite', 'C3 AI Platform'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 60,
       revenueAcceleration: 40,

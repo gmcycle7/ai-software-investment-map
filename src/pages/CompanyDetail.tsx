@@ -4,6 +4,8 @@ import { ALL_COMPANIES, COMPANY_BY_ID } from '../data/aiSoftwareCompanies';
 import { CATEGORIES, INVESTMENT_TYPES } from '../data/categories';
 import { ConfidenceBadge, ExposureBadge, MarketBadge, TaiwanLabelBadge } from '../components/Badges';
 import { KpiRadar } from '../components/KpiRadar';
+import { MarketDataPanel } from '../components/MarketDataPanel';
+import { INVESTOR_ANGLE } from '../data/investorAngles';
 
 export default function CompanyDetail() {
   const { id } = useParams<{ id: string }>();
@@ -76,7 +78,55 @@ export default function CompanyDetail() {
               .join('、')}
           </Field>
         </div>
+        {(company.tags?.length || company.technicalKeywords?.length) && (
+          <div className="mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-1.5">
+            {company.tags?.map((t) => (
+              <span key={`tag-${t}`} className="chip bg-brand-50 text-brand-700 dark:bg-brand-900/40 dark:text-brand-200">
+                #{t}
+              </span>
+            ))}
+            {company.technicalKeywords?.map((t) => (
+              <span key={`tk-${t}`} className="chip bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">
+                {t}
+              </span>
+            ))}
+          </div>
+        )}
       </header>
+
+      <MarketDataPanel ticker={company.ticker} />
+
+      {INVESTOR_ANGLE[company.id] && (
+        <section className="rounded-2xl border-l-4 border-sky-400 bg-sky-50/70 dark:bg-sky-900/15 p-5">
+          <div className="flex items-center gap-2 mb-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-sky-700 dark:text-sky-300">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4l3 2" />
+            </svg>
+            <h3 className="font-bold text-sky-900 dark:text-sky-200">給軟體分析師 / PM 的觀察點</h3>
+          </div>
+          <p className="text-sm text-slate-800 dark:text-slate-100 leading-relaxed">
+            {INVESTOR_ANGLE[company.id]}
+          </p>
+        </section>
+      )}
+
+      {company.analystView && (
+        <section className="rounded-2xl border-l-4 border-amber-400 bg-amber-50/70 dark:bg-amber-900/15 p-5">
+          <div className="flex items-center gap-2 mb-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-700 dark:text-amber-300">
+              <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.7.7 1 1.4 1 2.3v1h6v-1c0-.9.3-1.6 1-2.3A7 7 0 0 0 12 2z" />
+            </svg>
+            <h3 className="font-bold text-amber-900 dark:text-amber-200">分析師觀點（主觀）</h3>
+          </div>
+          <p className="text-sm text-slate-800 dark:text-slate-100 leading-relaxed">
+            {company.analystView}
+          </p>
+          <p className="text-xs text-amber-800/80 dark:text-amber-300/80 mt-2">
+            ※ 本段為主觀詮釋，與其他事實型欄位視覺區隔。不構成投資建議。
+          </p>
+        </section>
+      )}
 
       <section className="card p-5">
         <div className="flex flex-wrap items-center justify-between gap-3">
@@ -84,7 +134,7 @@ export default function CompanyDetail() {
           <div className="flex items-center gap-2">
             <label className="text-xs text-slate-500">比較另一家：</label>
             <select
-              className="px-2 py-1 rounded-lg border border-slate-200 text-sm"
+              className="input-base !py-1"
               value={compareId}
               onChange={(e) => setCompareId(e.target.value)}
             >
@@ -133,20 +183,20 @@ export default function CompanyDetail() {
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-lg bg-slate-50 p-3">
-      <div className="text-xs text-slate-500 mb-1">{label}</div>
-      <div className="text-slate-800">{children}</div>
+    <div className="rounded-lg bg-slate-50 dark:bg-slate-800/50 p-3">
+      <div className="text-xs text-slate-500 dark:text-slate-400 mb-1">{label}</div>
+      <div className="text-slate-800 dark:text-slate-200">{children}</div>
     </div>
   );
 }
 
 function ScoreCard({ title, score, desc, accent = 'brand' }: { title: string; score: number; desc: string; accent?: 'brand' | 'rose' }) {
-  const color = accent === 'rose' ? 'text-rose-600' : 'text-brand-700';
+  const color = accent === 'rose' ? 'text-rose-600 dark:text-rose-400' : 'text-brand-700 dark:text-brand-300';
   return (
     <div className="card p-5">
-      <div className="text-sm text-slate-500">{title}</div>
+      <div className="text-sm text-slate-500 dark:text-slate-400">{title}</div>
       <div className={`text-4xl font-extrabold mt-1 ${color}`}>{score.toFixed(1)}</div>
-      <p className="text-xs text-slate-500 mt-2 leading-relaxed">{desc}</p>
+      <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">{desc}</p>
     </div>
   );
 }

@@ -19,14 +19,14 @@ export function CompanyCard({ company }: { company: Company }) {
             {company.nameZh ?? company.name}
             <span className="ml-2 text-sm text-slate-500 font-medium">{company.name}</span>
           </div>
-          <div className="text-xs text-slate-500 mt-0.5">{company.ticker}</div>
+          <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{company.ticker}</div>
         </div>
         <MarketBadge market={company.market} />
       </div>
-      <p className="text-sm text-slate-700 mt-3 line-clamp-2">{company.whatTheyDo}</p>
+      <p className="text-sm text-slate-700 dark:text-slate-300 mt-3 line-clamp-2">{company.whatTheyDo}</p>
       <div className="flex flex-wrap gap-1.5 mt-3">
         {catLabels.slice(0, 3).map((c) => (
-          <span key={c} className="chip bg-slate-100 text-slate-700">
+          <span key={c} className="chip bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">
             {c}
           </span>
         ))}
@@ -46,9 +46,9 @@ export function CompanyCard({ company }: { company: Company }) {
 
 function Metric({ label, v }: { label: string; v: number }) {
   return (
-    <div className="bg-slate-50 rounded-lg p-2">
-      <div className="text-slate-500">{label}</div>
-      <div className="text-base font-bold text-brand-700">{v.toFixed(1)}</div>
+    <div className="bg-slate-50 dark:bg-slate-800/60 rounded-lg p-2">
+      <div className="text-slate-500 dark:text-slate-400">{label}</div>
+      <div className="text-base font-bold text-brand-700 dark:text-brand-300">{v.toFixed(1)}</div>
     </div>
   );
 }

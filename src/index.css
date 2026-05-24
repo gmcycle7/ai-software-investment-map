@@ -6,6 +6,10 @@
   color-scheme: light;
 }
 
+:root.dark {
+  color-scheme: dark;
+}
+
 html,
 body,
 #root {
@@ -15,10 +19,9 @@ body,
 body {
   margin: 0;
   font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', system-ui, sans-serif;
-  background-color: #f7f8fb;
-  color: #0f172a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100;
 }
 
 a {
@@ -28,16 +31,17 @@ a {
 
 @layer components {
   .card {
-    @apply bg-white rounded-2xl border border-slate-200 shadow-sm;
+    @apply bg-white rounded-2xl border border-slate-200 shadow-sm
+           dark:bg-slate-900 dark:border-slate-800;
   }
   .chip {
     @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium;
   }
   .section-title {
-    @apply text-2xl md:text-3xl font-bold tracking-tight text-slate-900;
+    @apply text-2xl md:text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100;
   }
   .section-subtitle {
-    @apply text-sm md:text-base text-slate-600 mt-1;
+    @apply text-sm md:text-base text-slate-600 dark:text-slate-400 mt-1;
   }
   .btn {
     @apply inline-flex items-center justify-center px-4 py-2 rounded-xl text-sm font-medium transition;
@@ -46,6 +50,12 @@ a {
     @apply btn bg-brand-600 text-white hover:bg-brand-700;
   }
   .btn-ghost {
-    @apply btn bg-white border border-slate-200 text-slate-700 hover:bg-slate-50;
+    @apply btn bg-white border border-slate-200 text-slate-700 hover:bg-slate-50
+           dark:bg-slate-900 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800;
+  }
+  .input-base {
+    @apply px-3 py-2 rounded-lg border border-slate-200 text-sm bg-white text-slate-900
+           dark:bg-slate-900 dark:border-slate-700 dark:text-slate-100
+           focus:outline-none focus:ring-2 focus:ring-brand-500/40;
   }
 }

@@ -17,19 +17,19 @@ export default function Categories() {
             <Link key={c.id} to={`/categories/${c.id}`} className="card p-5 hover:shadow-md transition">
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="text-xs text-slate-500">分類 {c.letter} · 堆疊層：{c.stackLayer}</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400">分類 {c.letter} · 堆疊層：{c.stackLayer}</div>
                   <h3 className="text-lg font-bold mt-0.5">{c.titleZh}</h3>
-                  <div className="text-xs text-slate-500">{c.titleEn}</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400">{c.titleEn}</div>
                 </div>
-                <div className="text-right text-xs text-slate-500">
+                <div className="text-right text-xs text-slate-500 dark:text-slate-400">
                   <div className="text-2xl font-extrabold text-brand-700">{count}</div>
                   收錄家數
                 </div>
               </div>
-              <p className="text-sm text-slate-700 mt-3">{c.summary}</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300 mt-3">{c.summary}</p>
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {c.monetization.slice(0, 3).map((m) => (
-                  <span key={m} className="chip bg-slate-100 text-slate-700">{m}</span>
+                  <span key={m} className="chip bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">{m}</span>
                 ))}
               </div>
             </Link>
@@ -44,8 +44,8 @@ export default function Categories() {
           {INVESTMENT_TYPES.map((t) => (
             <div key={t.id} className="card p-4">
               <h3 className="font-bold text-base">{t.titleZh}</h3>
-              <p className="text-sm text-slate-700 mt-2">{t.definition}</p>
-              <p className="text-xs text-slate-500 mt-2">範例：{t.examples}</p>
+              <p className="text-sm text-slate-700 dark:text-slate-300 mt-2">{t.definition}</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">範例：{t.examples}</p>
             </div>
           ))}
         </div>

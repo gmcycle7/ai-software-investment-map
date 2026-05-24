@@ -141,5 +141,8 @@ export interface Company {
   lastUpdated: string;
   investmentType: CompanyInvestmentType[];
   taiwanLabel?: TaiwanExposureLabel; // 台股公司專用
+  analystView?: string; // 主觀分析觀點（與事實型欄位視覺隔離，琥珀色邊框呈現）
+  tags?: string[]; // 跨類別搜尋用的自由標籤（例：copilot、agent、open-source、govt、smb）
+  technicalKeywords?: string[]; // 技術相關關鍵字（例：MCP、LoRA、TPU、Vector Search、Bedrock）
   investmentKpi: InvestmentKpi;
 }

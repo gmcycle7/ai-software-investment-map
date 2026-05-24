@@ -10,11 +10,11 @@ export function ComparisonTable({ companies, title }: Props) {
   return (
     <div className="card overflow-hidden">
       {title && (
-        <div className="p-4 border-b border-slate-200 font-bold text-base">{title}</div>
+        <div className="p-4 border-b border-slate-200 dark:border-slate-800 font-bold text-base">{title}</div>
       )}
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
-          <thead className="bg-slate-50 text-slate-600 text-xs">
+          <thead className="bg-slate-50 dark:bg-slate-800/60 text-slate-600 dark:text-slate-300 text-xs">
             <tr>
               <th className="text-left p-3">公司</th>
               <th className="text-left p-3">市場</th>
@@ -29,14 +29,14 @@ export function ComparisonTable({ companies, title }: Props) {
           </thead>
           <tbody>
             {companies.map((c) => (
-              <tr key={c.id} className="border-t border-slate-100 hover:bg-slate-50">
+              <tr key={c.id} className="border-t border-slate-100 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/50">
                 <td className="p-3">
-                  <Link to={`/companies/${c.id}`} className="text-brand-700 font-medium hover:underline">
+                  <Link to={`/companies/${c.id}`} className="text-brand-700 dark:text-brand-300 font-medium hover:underline">
                     {c.nameZh ?? c.name}
                   </Link>
-                  <div className="text-xs text-slate-500">{c.ticker}</div>
+                  <div className="text-xs text-slate-500 dark:text-slate-400">{c.ticker}</div>
                 </td>
-                <td className="p-3 text-xs text-slate-600">{c.market}</td>
+                <td className="p-3 text-xs text-slate-600 dark:text-slate-300">{c.market}</td>
                 <td className="p-3 text-right">{c.investmentKpi.shortTermScore.toFixed(1)}</td>
                 <td className="p-3 text-right">{c.investmentKpi.threeYearScore.toFixed(1)}</td>
                 <td className="p-3 text-right">{c.investmentKpi.fiveYearScore.toFixed(1)}</td>

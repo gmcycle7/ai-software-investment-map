@@ -24,7 +24,7 @@ export default function CategoryDetail() {
       <div>
         <Link to="/categories" className="text-sm text-brand-700 hover:underline">← 返回分類</Link>
         <h1 className="section-title mt-2">
-          {meta.titleZh} <span className="text-base text-slate-500 font-normal">{meta.titleEn}</span>
+          {meta.titleZh} <span className="text-base text-slate-500 dark:text-slate-400 font-normal">{meta.titleEn}</span>
         </h1>
         <p className="section-subtitle">{meta.summary}</p>
       </div>
@@ -60,7 +60,7 @@ function Block({ title, children }: { title: string; children: React.ReactNode }
   return (
     <div className="card p-5">
       <h3 className="font-bold text-base">{title}</h3>
-      <div className="mt-2 text-sm text-slate-700 leading-relaxed">{children}</div>
+      <div className="mt-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{children}</div>
     </div>
   );
 }

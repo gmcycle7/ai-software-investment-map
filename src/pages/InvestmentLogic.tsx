@@ -32,7 +32,7 @@ export default function InvestmentLogic() {
         <div className="text-lg md:text-xl font-bold text-brand-700 break-words">
           AI 軟體價值 = Distribution × Workflow Lock-in × Data Moat × AI Capability × Pricing Power
         </div>
-        <ul className="mt-3 text-sm text-slate-700 list-disc pl-5 space-y-1.5">
+        <ul className="mt-3 text-sm text-slate-700 dark:text-slate-300 list-disc pl-5 space-y-1.5">
           <li><strong>Distribution（通路）：</strong>已經接觸客戶的能力。決定 AI 加值能不能被「立刻變現」</li>
           <li><strong>Workflow Lock-in（工作流程鎖定）：</strong>客戶離不開的程度</li>
           <li><strong>Data Moat（資料護城河）：</strong>專有資料、客戶資料、互動資料的累積</li>
@@ -45,7 +45,7 @@ export default function InvestmentLogic() {
         <div className="text-lg md:text-xl font-bold text-rose-600 break-words">
           AI 軟體風險 = 模型商品化 + 開源競爭 + AI 原生顛覆 + ROI 不明 + 資安 / 合規
         </div>
-        <ul className="mt-3 text-sm text-slate-700 list-disc pl-5 space-y-1.5">
+        <ul className="mt-3 text-sm text-slate-700 dark:text-slate-300 list-disc pl-5 space-y-1.5">
           <li><strong>模型商品化：</strong>模型能力差距縮小，靠模型獨占的差異化會消失</li>
           <li><strong>開源競爭：</strong>Llama / Mistral / DeepSeek 等開源模型壓縮收費空間</li>
           <li><strong>AI 原生顛覆：</strong>新創（Cursor / Perplexity / Harvey 等）以 AI-native 架構挑戰既有 SaaS</li>
@@ -55,7 +55,7 @@ export default function InvestmentLogic() {
       </Card>
 
       <Card title="實務投資原則">
-        <ol className="list-decimal pl-5 space-y-2 text-sm text-slate-700">
+        <ol className="list-decimal pl-5 space-y-2 text-sm text-slate-700 dark:text-slate-300">
           <li>「AI 故事」≠「AI 營收」。先確認真實付費滲透。</li>
           <li>判斷席次定價是否被 Agent 取代（HR / CRM / 客服 / Coding 都受影響）。</li>
           <li>模型本身不是長期護城河。資料與通路才是。</li>
@@ -83,7 +83,7 @@ function Card({ title, children, big = false }: { title: string; children: React
   return (
     <div className={`card ${big ? 'p-6' : 'p-5'}`}>
       <h2 className="text-lg font-bold">{title}</h2>
-      <div className="mt-3 text-sm text-slate-700 leading-relaxed">{children}</div>
+      <div className="mt-3 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{children}</div>
     </div>
   );
 }

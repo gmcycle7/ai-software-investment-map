@@ -2,6 +2,23 @@
 
 本網站為純靜態資料。任何更新都應遵循以下流程，並嚴守反幻覺原則。
 
+## 來源優先序（4 級）
+
+任何寫入網站的資料，請依以下優先序選擇來源。寧可標 `Needs Verification`，也不要引用 Level 4 的來源。
+
+| 等級 | 範例 | 適合欄位 | 注意事項 |
+| --- | --- | --- | --- |
+| **L1（最佳）** | 公司年報 / 10-K / 20-F、投資人簡報、季報新聞稿、Earnings Call transcript | 所有事實欄位（`whatTheyDo`、`monetizationModel`、`coreProducts`、`aiProducts`、`aiRevenueExposure`、KPI 中的 `disclosedAiRevenue`） | 必須附原始 PDF / IR 頁面 URL 至 `sourceUrls` |
+| **L2（高）** | 公司官方產品頁、官方 newsroom / blog、官方技術白皮書、CEO 發表會錄音 | 產品線、技術描述、合作公告、發布節奏 | URL 必須是 `*.company.com` 或 `*.investor.company.com` 等官方域名 |
+| **L3（中）** | 主流半導體 / 軟體分析媒體（SemiAnalysis、IEEE Spectrum、The Information、Stratechery、Substack 知名作者）、賣方研究報告（公開節錄）、Gartner / IDC / Forrester 公開報告 | 趨勢比較、產業背景、競爭格局 | 引用時請註明媒體名與發布日；不要當作事實欄位來源 |
+| **L4（不採用）** | 未具名「業內人士」聲明、含目標價的個股推薦文章、Twitter / Reddit / 論壇 rumor、未經查證的譯稿、AI 生成摘要 | — | 一律剔除。需要更新時請回頭找 L1～L3 的原始來源 |
+
+### 何時降一級
+
+- 公司在 IR 簡報用「100+」、「數十家」這類模糊用語 → 降到 L2 等級對待，並在 `kpiCommentary` 中標註不精確
+- L3 媒體報導的數字「轉述」公司內部 → 不要當作 L1；要找到原始公司來源
+- 任何 L4 內容若實在重要 → 寫入時加 `需要資料驗證` 標籤，並把 `confidenceLevel` 降到 `Low`
+
 ## 更新觸發點
 
 - 公司公布季報 / Earnings call

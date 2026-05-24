@@ -7,6 +7,7 @@ import { DEV_TOOLS_AND_SECURITY } from './companies/devToolsAndSecurity';
 import { ADS_AND_VERTICAL } from './companies/adsAndVertical';
 import { EDA_AND_INDUSTRIAL } from './companies/edaAndIndustrial';
 import { TAIWAN_COMPANIES } from './companies/taiwan';
+import { EXPANSION } from './companies/expansion';
 
 // 全站唯一公司資料來源
 // 注意：所有 KPI 分數皆為「產業邏輯評分，尚未串接即時財務資料」
@@ -19,6 +20,7 @@ export const ALL_COMPANIES: Company[] = [
   ...ADS_AND_VERTICAL,
   ...EDA_AND_INDUSTRIAL,
   ...TAIWAN_COMPANIES,
+  ...EXPANSION,
 ];
 
 export const COMPANY_BY_ID: Record<string, Company> = Object.fromEntries(

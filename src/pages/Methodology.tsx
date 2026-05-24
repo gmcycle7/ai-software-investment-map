@@ -120,10 +120,10 @@ function Formula({ title, purpose, formula }: { title: string; purpose: string; 
     <section className="card p-5">
       <h2 className="text-lg font-bold">{title}</h2>
       <p className="text-sm text-slate-700 mt-1">{purpose}</p>
-      <pre className="mt-3 bg-slate-50 rounded-lg p-3 text-xs overflow-x-auto leading-relaxed text-slate-700">
+      <pre className="mt-3 bg-slate-50 dark:bg-slate-800/60 rounded-lg p-3 text-xs overflow-x-auto leading-relaxed text-slate-700 dark:text-slate-200">
 {formula}
       </pre>
-      <p className="text-xs text-slate-500 mt-2">
+      <p className="text-xs text-slate-500 dark:text-slate-400 mt-2">
         此 KPI 為產業邏輯評分，尚未串接即時財務資料。
       </p>
     </section>

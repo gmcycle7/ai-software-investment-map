@@ -37,6 +37,10 @@ export const PLATFORM_GIANTS: Company[] = [
     confidenceLevel: 'High',
     lastUpdated: '2026-05-24',
     investmentType: ['platform', 'workflow-lockin', 'ai-upsell-saas'],
+    analystView:
+      '微軟是當前最具「通路霸權」特質的 AI 軟體公司：Azure + GitHub + Office 三條通路同時推 AI 加值，外加 OpenAI 與自研 Phi 雙模型來源。最關鍵的觀察點不是 Copilot 滲透率本身，而是 Copilot 帶來的 NRR 是否能持續高於同業；若 Agent 化讓席次數收縮，微軟可能變成「席次數下降但每席 ARR 上升」的混合結構。長期最大不確定性是與 OpenAI 合作條款的演變。',
+    tags: ['copilot', 'agent', 'model-partner', 'platform', 'enterprise', 'govt', 'developer-tools'],
+    technicalKeywords: ['Azure OpenAI', 'Microsoft 365 Copilot', 'GitHub Copilot', 'Copilot Studio', 'Azure AI Foundry', 'Phi', 'Maia'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 90,
       revenueAcceleration: 75,
@@ -110,6 +114,10 @@ export const PLATFORM_GIANTS: Company[] = [
     confidenceLevel: 'High',
     lastUpdated: '2026-05-24',
     investmentType: ['platform', 'model-provider', 'data-moat'],
+    analystView:
+      'Alphabet 是少數同時具備 Frontier 模型、自研晶片（TPU）與分發通路（Search、YouTube、Android）的公司，理論上是 AI 軟體最完整的玩家。但「AI Overviews 自我蠶食搜尋廣告」是結構性風險：當答案直接顯示，使用者點擊外站次數下降，廣告主出價基礎可能改變。短期看點是 Gemini 在開發者與企業端的真實 API 用量是否能追上 Anthropic / OpenAI。',
+    tags: ['model-provider', 'search', 'ads', 'mobile-os', 'platform', 'consumer', 'open-distribution'],
+    technicalKeywords: ['Gemini', 'TPU', 'Vertex AI', 'AI Overviews', 'NotebookLM', 'Search Generative Experience'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 85,
       revenueAcceleration: 70,
@@ -256,6 +264,10 @@ export const PLATFORM_GIANTS: Company[] = [
     confidenceLevel: 'High',
     lastUpdated: '2026-05-24',
     investmentType: ['platform', 'model-provider', 'data-moat'],
+    analystView:
+      'Meta 的 AI 投資邏輯與多數 AI 軟體公司不同：它不是賣 AI，而是用 AI 改善廣告 ROI 飛輪。Llama 開源是聰明戰略——讓 Meta 站在 OpenAI 與 Google 之外的第三極，同時鞏固開發者好感度。最大風險不是 Llama 不夠強，而是 Reality Labs 持續燒錢稀釋 AI 改善廣告的成果。',
+    tags: ['open-source', 'model-provider', 'ads', 'consumer', 'platform'],
+    technicalKeywords: ['Llama', 'Advantage+', 'FAIR', 'Meta AI'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 80,
       revenueAcceleration: 80,

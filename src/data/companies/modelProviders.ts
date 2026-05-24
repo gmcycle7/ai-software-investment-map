@@ -27,6 +27,10 @@ export const MODEL_PROVIDERS: Company[] = [
     confidenceLevel: 'Medium',
     lastUpdated: '2026-05-24',
     investmentType: ['model-provider', 'ai-native-challenger'],
+    analystView:
+      'OpenAI 的核心問題不是模型強不強，而是商業模式韌性。ChatGPT 訂閱是極強的消費者品牌，但 API 端面對開源模型與 Anthropic 雙向壓力。長期最大不確定性是「微軟轉變角色」的可能：從合作夥伴變競爭者（如果 Phi 系列 + Azure 直接吃 OpenAI 的企業客戶）。未上市且結構複雜，無法直接投資。',
+    tags: ['model-provider', 'consumer', 'b2b', 'agent', 'ai-native', 'private'],
+    technicalKeywords: ['GPT', 'ChatGPT', 'Operator', 'Agents SDK', 'Sora', 'DALL-E'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 95,
       marketNarrativeStrength: 95,
@@ -92,6 +96,10 @@ export const MODEL_PROVIDERS: Company[] = [
     confidenceLevel: 'Medium',
     lastUpdated: '2026-05-24',
     investmentType: ['model-provider', 'ai-native-challenger'],
+    analystView:
+      'Anthropic 在 Coding 與長文本企業任務上的差異化目前最清楚。MCP 主導與 Computer Use 早期布局讓它在 Agent 化階段有先發優勢。雙雲（AWS + Google）策略降低單一通路依賴，但同時也代表「沒有自家通路」是長期弱點。未上市，無法直接投資；但是「AI 軟體投資觀察的指標性公司」。',
+    tags: ['model-provider', 'safety', 'agent', 'coding', 'b2b', 'ai-native', 'private'],
+    technicalKeywords: ['Claude', 'Computer Use', 'MCP', 'Constitutional AI', 'Claude Code'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 90,
       marketNarrativeStrength: 90,

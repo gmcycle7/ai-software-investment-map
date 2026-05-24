@@ -9,6 +9,9 @@ import KpiDashboard from './pages/KpiDashboard';
 import Taiwan from './pages/Taiwan';
 import InvestmentLogic from './pages/InvestmentLogic';
 import Methodology from './pages/Methodology';
+import Glossary from './pages/Glossary';
+import Stack from './pages/Stack';
+import Catalysts from './pages/Catalysts';
 
 export default function App() {
   return (
@@ -23,6 +26,9 @@ export default function App() {
         <Route path="/taiwan" element={<Taiwan />} />
         <Route path="/investment-logic" element={<InvestmentLogic />} />
         <Route path="/methodology" element={<Methodology />} />
+        <Route path="/glossary" element={<Glossary />} />
+        <Route path="/stack" element={<Stack />} />
+        <Route path="/catalysts" element={<Catalysts />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Layout>

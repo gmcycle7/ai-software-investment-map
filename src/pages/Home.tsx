@@ -12,14 +12,14 @@ export default function Home() {
   return (
     <div className="space-y-10">
       <section className="text-center md:text-left">
-        <div className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-brand-50 text-brand-700">
+        <div className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-brand-50 text-brand-700 dark:bg-brand-900/40 dark:text-brand-200">
           教育性研究專案 · 不構成投資建議
         </div>
         <h1 className="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight">
           AI 軟體產業投資地圖
           <span className="block text-brand-700">美股與台股</span>
         </h1>
-        <p className="mt-4 max-w-3xl text-slate-600">
+        <p className="mt-4 max-w-3xl text-slate-600 dark:text-slate-400">
           幫助你分辨「真實 AI 軟體贏家」與「只有 AI 敘事」的公司。
           所有公司皆以結構化分類、KPI 評分、護城河分析、與顛覆風險呈現，並逐筆標註資料可信度。
         </p>
@@ -94,10 +94,10 @@ export default function Home() {
               to={`/categories/${c.id}`}
               className="card p-4 hover:shadow-md transition"
             >
-              <div className="text-xs text-slate-500">分類 {c.letter}</div>
+              <div className="text-xs text-slate-500 dark:text-slate-400">分類 {c.letter}</div>
               <div className="font-bold text-base mt-0.5">{c.titleZh}</div>
-              <div className="text-xs text-slate-500 mt-1">{c.titleEn}</div>
-              <p className="text-sm text-slate-600 mt-2 line-clamp-3">{c.summary}</p>
+              <div className="text-xs text-slate-500 dark:text-slate-400 mt-1">{c.titleEn}</div>
+              <p className="text-sm text-slate-600 dark:text-slate-300 mt-2 line-clamp-3">{c.summary}</p>
             </Link>
           ))}
         </div>
@@ -110,7 +110,7 @@ function Stat({ n, label }: { n: number; label: string }) {
   return (
     <div className="card p-3">
       <div className="text-2xl font-extrabold text-brand-700">{n}</div>
-      <div className="text-xs text-slate-500">{label}</div>
+      <div className="text-xs text-slate-500 dark:text-slate-400">{label}</div>
     </div>
   );
 }
@@ -119,7 +119,7 @@ function Card({ title, children }: { title: string; children: React.ReactNode })
   return (
     <div className="card p-5">
       <h3 className="text-lg font-bold">{title}</h3>
-      <div className="mt-3 text-sm text-slate-700 leading-relaxed">{children}</div>
+      <div className="mt-3 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">{children}</div>
     </div>
   );
 }

@@ -28,7 +28,11 @@ export const TAIWAN_COMPANIES: Company[] = [
     confidenceLevel: 'Medium',
     lastUpdated: '2026-05-24',
     investmentType: ['ai-upsell-saas'],
+    analystView:
+      '在台股中，趨勢科技是少數能與美系資安巨頭並列討論的 AI 軟體公司。優勢在亞太區（特別是日本）通路與既有客戶；劣勢在規模差距與品牌全球曝光。AI 化的真實滲透速度，是觀察「老資安公司能否成功轉型 AI Native」的指標案例。',
     taiwanLabel: 'direct-ai-software',
+    tags: ['cybersecurity', 'asia-pacific', 'agent', 'enterprise', 'taiwan'],
+    technicalKeywords: ['Trend Vision One', 'Companion AI'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 60,
       revenueAcceleration: 55,

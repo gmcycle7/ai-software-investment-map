@@ -27,6 +27,10 @@ export const ENTERPRISE_SAAS: Company[] = [
     confidenceLevel: 'High',
     lastUpdated: '2026-05-24',
     investmentType: ['platform', 'workflow-lockin', 'ai-upsell-saas'],
+    analystView:
+      'Salesforce 是「席次定價被 Agent 取代」這個結構性問題的最大實驗場。Agentforce 朝 outcome-based 收費走是正確方向，但執行細節（成果定義、爭議處理、計費可預測性）是新挑戰。短期看 Data Cloud 包裝進 AI 加值的速度；長期看是否能說服客戶把客服 / 銷售 SDR 工作真的交給 Agent。',
+    tags: ['agent', 'copilot', 'crm', 'enterprise', 'workflow', 'outcome-based'],
+    technicalKeywords: ['Agentforce', 'Einstein', 'Data Cloud', 'MuleSoft', 'Slack'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 85,
       revenueAcceleration: 60,
@@ -98,6 +102,10 @@ export const ENTERPRISE_SAAS: Company[] = [
     confidenceLevel: 'High',
     lastUpdated: '2026-05-24',
     investmentType: ['platform', 'workflow-lockin', 'data-moat'],
+    analystView:
+      'ServiceNow 是「企業流程作業系統」這個敘事的最強代表，工作流程資料是當前 AI 軟體最稀缺的資產之一。Pro Plus 是經典 SaaS 提價教科書，AI 加值同樣走「漲價優先、滲透次之」路線。風險是估值已反映完美執行；任何 Now Assist 滲透不如預期都會被股價放大。',
+    tags: ['agent', 'workflow', 'copilot', 'enterprise', 'govt', 'platform'],
+    technicalKeywords: ['Now Assist', 'AI Agents', 'Pro Plus', 'Now Platform'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 85,
       revenueAcceleration: 80,
@@ -168,6 +176,10 @@ export const ENTERPRISE_SAAS: Company[] = [
     confidenceLevel: 'High',
     lastUpdated: '2026-05-24',
     investmentType: ['platform', 'ai-upsell-saas', 'workflow-lockin'],
+    analystView:
+      'Adobe 的 AI 處境是矛盾的：Firefly 是商用安全模型的優秀產品，但消費端被 Midjourney、Sora 直接壓力；訂閱定價爭議又持續發酵。長期看 Creative Cloud 的工作流程鎖定還在，但「Adobe = 創作的唯一通道」這個前提正在被 AI 原生工具軟化。',
+    tags: ['copilot', 'creative', 'ai-native-risk', 'enterprise', 'consumer'],
+    technicalKeywords: ['Firefly', 'GenStudio', 'Acrobat AI Assistant'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 80,
       revenueAcceleration: 60,
@@ -308,6 +320,10 @@ export const ENTERPRISE_SAAS: Company[] = [
     confidenceLevel: 'Medium',
     lastUpdated: '2026-05-24',
     investmentType: ['workflow-lockin', 'ai-upsell-saas'],
+    analystView:
+      'Workday 是 HR / 財務領域最深的工作流程鎖定者，但這也是最危險的位置：HR 是「席次定價最容易被 Agent 取代」的場景之一。資料護城河深，可保短中期；但如果 Agent 真的把 HR 操作流程自動化，「人數×單價」的 ARR 公式長期需要重寫。',
+    tags: ['hr', 'finance', 'agent', 'enterprise', 'seat-risk'],
+    technicalKeywords: ['Workday AI', 'Agent System of Record', 'Adaptive Planning'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 65,
       revenueAcceleration: 55,

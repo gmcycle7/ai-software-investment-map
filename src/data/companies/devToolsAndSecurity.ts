@@ -209,6 +209,10 @@ export const DEV_TOOLS_AND_SECURITY: Company[] = [
     confidenceLevel: 'Low',
     lastUpdated: '2026-05-24',
     investmentType: ['ai-native-challenger'],
+    analystView:
+      'Cursor 是 AI Coding 賽道的「使用者體驗冠軍」，但所有 AI 原生 IDE 都共享同一個結構性問題：高度依賴外部 LLM 供應商（主要 Anthropic Claude）。模型成本變動會直接吃毛利。長期最大不確定性是 GitHub Copilot 與 Claude Code 的功能追趕速度——若兩個都追上，Cursor 的差異化就只剩 UX 一塊。未上市，無法直接投資。',
+    tags: ['coding', 'ai-native', 'agent', 'smb', 'individual', 'private'],
+    technicalKeywords: ['Composer', 'MCP', 'Apply', 'Tab'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 90,
       marketNarrativeStrength: 85,
@@ -271,6 +275,10 @@ export const DEV_TOOLS_AND_SECURITY: Company[] = [
     confidenceLevel: 'High',
     lastUpdated: '2026-05-24',
     investmentType: ['platform', 'data-moat'],
+    analystView:
+      'CrowdStrike 是「Agent 化資安」的當前主導敘事，Charlotte AI 與 Falcon 端點資料的結合是真實競爭優勢。但估值已 reflect 完美執行；任何重大資安事件（即使不是自家）都可能短期殺估值。長期看 SOC 自動化的 outcome 計費能不能擴大 ARR 結構。',
+    tags: ['cybersecurity', 'copilot', 'agent', 'endpoint', 'soc'],
+    technicalKeywords: ['Charlotte AI', 'Falcon', 'EDR', 'Identity Protection'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 80,
       revenueAcceleration: 75,

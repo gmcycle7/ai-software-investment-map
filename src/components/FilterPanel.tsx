@@ -82,10 +82,12 @@ export function FilterPanel({ value, onChange }: Props) {
     <div className="card p-4">
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3">
         <div>
-          <label className="text-xs text-slate-500">關鍵字</label>
+          <label className="text-xs text-slate-500 dark:text-slate-400">
+            關鍵字 <span className="opacity-70">（公司名 / Ticker / 產品 / 競爭者 / 標籤）</span>
+          </label>
           <input
-            className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-200 text-sm"
-            placeholder="公司名 / Ticker"
+            className="w-full mt-1 input-base"
+            placeholder="例：Copilot、向量、MCP、Agent…"
             value={value.query}
             onChange={(e) => set('query', e.target.value)}
           />
@@ -181,9 +183,9 @@ function Select({
 }) {
   return (
     <div>
-      <label className="text-xs text-slate-500">{label}</label>
+      <label className="text-xs text-slate-500 dark:text-slate-400">{label}</label>
       <select
-        className="w-full mt-1 px-3 py-2 rounded-lg border border-slate-200 text-sm bg-white"
+        className="w-full mt-1 input-base"
         value={value}
         onChange={(e) => onChange(e.target.value)}
       >
@@ -196,7 +198,7 @@ function Select({
 function Range({ label, value, onChange }: { label: string; value: number; onChange: (v: number) => void }) {
   return (
     <div>
-      <label className="text-xs text-slate-500">{label}</label>
+      <label className="text-xs text-slate-500 dark:text-slate-400">{label}</label>
       <input
         type="range"
         min={0}

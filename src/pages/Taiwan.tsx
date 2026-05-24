@@ -41,7 +41,7 @@ export default function Taiwan() {
 
       <div className="card p-5">
         <h2 className="text-lg font-bold">台灣可能的 AI 軟體相關方向</h2>
-        <ul className="mt-3 grid sm:grid-cols-2 gap-2 text-sm text-slate-700 list-disc pl-5">
+        <ul className="mt-3 grid sm:grid-cols-2 gap-2 text-sm text-slate-700 dark:text-slate-300 list-disc pl-5">
           <li>企業 AI 系統整合 / 顧問</li>
           <li>資安軟體（Trend Micro 為代表）</li>
           <li>工業 AI / 智慧工廠 軟體</li>
@@ -52,7 +52,7 @@ export default function Taiwan() {
           <li>AI 醫療軟體（影像、臨床決策）</li>
           <li>AI PC / 邊緣裝置軟體生態</li>
         </ul>
-        <p className="text-xs text-slate-500 mt-3">
+        <p className="text-xs text-slate-500 dark:text-slate-400 mt-3">
           注意：若一家公司沒有可驗證的 AI 軟體業務，請不要強行歸類；
           本網站對於 Taiwan 公司一律標示「需進一步驗證」當作預設保守作法。
         </p>

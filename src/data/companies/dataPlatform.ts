@@ -26,6 +26,10 @@ export const DATA_PLATFORM_AND_AGENTS: Company[] = [
     confidenceLevel: 'High',
     lastUpdated: '2026-05-24',
     investmentType: ['data-moat', 'platform'],
+    analystView:
+      'Snowflake 與 Databricks 的長期對決決定「資料 + AI」的格局。Snowflake 在「企業 BI / 治理」面強，Databricks 在「ML / LLM」面強，雙方都在跨界。Cortex 真實付費滲透是觀察 Snowflake AI 變現的關鍵；目前 AI 工作負載佔總消耗的比例仍偏低。',
+    tags: ['data-platform', 'vector-search', 'rag', 'enterprise', 'usage-based'],
+    technicalKeywords: ['Cortex', 'Snowpark', 'Snowflake Copilot', 'Iceberg', 'Snowpark Container Services'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 75,
       revenueAcceleration: 65,
@@ -358,6 +362,10 @@ export const DATA_PLATFORM_AND_AGENTS: Company[] = [
     confidenceLevel: 'Medium',
     lastUpdated: '2026-05-24',
     investmentType: ['platform', 'ai-upsell-saas'],
+    analystView:
+      'Cloudflare 不是傳統 AI 軟體公司，但它有可能成為「AI 時代的 API 入口層」：AI Gateway、Workers AI、Vectorize 三件套組合起來，是 AI 應用部署的便利層。短期 ARR 中 AI 佔比仍小；長期看 AI 流量是否真的會在「邊緣」推論（與超大規模雲端中心化推論之間的平衡）。',
+    tags: ['edge', 'gateway', 'vector-search', 'dev-platform', 'security'],
+    technicalKeywords: ['Workers AI', 'AI Gateway', 'Vectorize', 'AutoRAG', 'R2', 'Cloudflare One'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 80,
       revenueAcceleration: 65,
@@ -428,6 +436,10 @@ export const DATA_PLATFORM_AND_AGENTS: Company[] = [
     confidenceLevel: 'High',
     lastUpdated: '2026-05-24',
     investmentType: ['data-moat', 'workflow-lockin', 'platform'],
+    analystView:
+      'Palantir 是少數有清楚商用 AI Agent 落地案例的公司，AIP Bootcamp 銷售模式重新發明了「跑通 PoC 才付費」。但目前股價已反映「AI 軟體之神」式的估值，任何商業節奏或政府預算波動都會被放大。長期關鍵是商業（非政府）營收佔比能否持續提升，把對單一客戶 / 預算源的依賴降低。',
+    tags: ['agent', 'data-moat', 'govt', 'enterprise', 'ontology'],
+    technicalKeywords: ['AIP', 'Foundry', 'Gotham', 'Bootcamp', 'Apollo'],
     investmentKpi: defaultKpi({
       aiProductLaunchMomentum: 90,
       revenueAcceleration: 90,

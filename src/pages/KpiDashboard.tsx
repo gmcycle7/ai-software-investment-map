@@ -43,9 +43,9 @@ export default function KpiDashboard() {
             className={`px-3 py-2 rounded-lg text-sm font-medium ${
               active === t.key
                 ? t.accent === 'rose'
-                  ? 'bg-rose-100 text-rose-700'
-                  : 'bg-brand-50 text-brand-700'
-                : 'text-slate-600 hover:bg-slate-50'
+                  ? 'bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-200'
+                  : 'bg-brand-50 text-brand-700 dark:bg-brand-900/40 dark:text-brand-200'
+                : 'text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
             }`}
           >
             {t.label}
@@ -64,11 +64,11 @@ export default function KpiDashboard() {
             const accentBg = active === 'aiDisruptionRiskScore' ? 'bg-rose-500' : 'bg-brand-600';
             return (
               <div key={c.id} className="flex items-center gap-3">
-                <div className="w-6 text-xs text-slate-500 text-right">{i + 1}</div>
+                <div className="w-6 text-xs text-slate-500 dark:text-slate-400 text-right">{i + 1}</div>
                 <div className="w-44 text-sm font-medium truncate">
-                  {c.nameZh ?? c.name} <span className="text-xs text-slate-500">{c.ticker}</span>
+                  {c.nameZh ?? c.name} <span className="text-xs text-slate-500 dark:text-slate-400">{c.ticker}</span>
                 </div>
-                <div className="flex-1 bg-slate-100 rounded-full h-2 overflow-hidden">
+                <div className="flex-1 bg-slate-100 dark:bg-slate-800 rounded-full h-2 overflow-hidden">
                   <div className={`h-2 ${accentBg}`} style={{ width: `${v}%` }} />
                 </div>
                 <div className="w-12 text-right text-sm font-bold">{v.toFixed(1)}</div>

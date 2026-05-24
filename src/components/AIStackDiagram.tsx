@@ -17,14 +17,14 @@ export function AIStackDiagram() {
         {layers.map((l, i) => (
           <div
             key={l.title}
-            className="rounded-xl border border-slate-200 p-3 flex items-start gap-3 bg-white"
+            className="rounded-xl border border-slate-200 dark:border-slate-800 p-3 flex items-start gap-3 bg-white dark:bg-slate-900"
           >
             <div className={`w-10 h-10 rounded-lg ${l.color} text-white grid place-items-center font-bold`}>
               {i + 1}
             </div>
             <div>
               <div className="font-semibold">{l.title}</div>
-              <div className="text-sm text-slate-600 mt-0.5">{l.desc}</div>
+              <div className="text-sm text-slate-600 dark:text-slate-400 mt-0.5">{l.desc}</div>
             </div>
           </div>
         ))}
